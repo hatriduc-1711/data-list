@@ -1,0 +1,268 @@
+.wrapper-table {
+    width: 900px;
+    background-color: #eeeeeeba;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #a2a1a1;
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(27, 36, 95, 0.819);
+            margin: 0;
+        }
+
+        .select-export {
+            font-size: 16px;
+            color: #fff;
+            background-color: rgb(94, 147, 234);
+            border: none;
+            border-radius: 5px;
+            padding: 4px 5px;
+            cursor: pointer;
+        }
+    }
+
+    .filter-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0 15px;
+
+        .wrapper-filter-date {
+            position: relative;
+            width: 105px;
+
+            .date-picker {
+                position: absolute;
+                left: 50%;
+                transform: translateY(10px) translateX(-50%);
+                z-index: 10;
+            }
+        }
+
+        .options-filter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            outline: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 105px;
+            font-size: 15px;
+            color: #a2a1a1;
+            background-color: #fff;
+            padding: 3px 7px;
+            border-radius: 5px;
+            border: 2px solid #e6e4e4d3;
+            cursor: pointer;
+        }
+
+        button {
+            width: 95px;
+            font-size: 15px;
+            font-weight: 600;
+            background-color: #fff;
+            padding: 3px;
+            border-radius: 5px;
+            border: 2px solid #e6e4e4d3;
+            cursor: pointer;
+        }
+
+        .button-apply {
+            color: rgb(94, 147, 234);
+            border-color: rgb(94, 147, 234);
+            margin-left: 30px;
+        }
+
+        .button-clear {
+            color: #e95858;
+            border-color: #e95858;
+        }
+    }
+
+    .table-data-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .column,
+            .column5,
+            .column4 {
+                width: 12%;
+            }
+
+            .column2 {
+                width: 15%;
+            }
+
+            .column3 {
+                width: 9%;
+            }
+
+            .column6,
+            .column7 {
+                width: 20%;
+            }
+
+            .space {
+                width: 20%;
+                height: 10px;
+            }
+        }
+
+        .header-table {
+            span {
+                font-size: 15px;
+                font-weight: 700;
+                color: rgba(27, 36, 95, 0.819);
+                padding: 10px 15px;
+            }
+        }
+
+        .body-table {
+            max-height: 300px;
+            overflow-y: scroll;
+
+            .data-item {
+                background-color: #fff;
+                border-radius: 6px;
+
+                + .data-item {
+                    margin-top: 10px;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgba(27, 36, 95, 0.819);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding: 10px 15px;
+                }
+
+                .button-view-detail {
+                    width: 75%;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgba(27, 36, 95, 0.819);
+                    background-color: #fff;
+                    border: 2px solid rgba(27, 36, 95, 0.819);
+                    border-radius: 999px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                }
+
+                .button-delete {
+                    font-size: 16px;
+                    color: #e95858;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.Processing {
+    color: #ded370 !important;
+}
+
+.Pending {
+    color: #a2a1a1 !important;
+}
+
+.Fulfilled {
+    color: #62dc79 !important;
+}
+
+.Received {
+    color: rgb(94, 147, 234) !important;
+}
+
+.wrapper-table {
+    .filter-bar {
+        .react-datepicker__navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+        }
+    }
+}
+
+.background-modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000055;
+
+    .wrapper-modal-detail {
+        width: 350px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #fff;
+
+        .detail-data {
+            display: flex;
+
+            .name {
+                font-size: 15px;
+                font-weight: 600;
+                color: rgba(27, 36, 95, 0.819);
+                margin-right: 10px;
+            }
+
+            .data {
+                font-size: 14px;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: end;
+
+            button {
+                font-size: 15px;
+                font-weight: 600;
+                background-color: #fff;
+                padding: 2px 15px;
+                border-radius: 999px;
+                cursor: pointer;
+
+                + button {
+                    margin-left: 10px;
+                }
+            }
+
+            .button-update {
+                color: rgb(94, 147, 234);
+                border-color: rgb(94, 147, 234);
+            }
+
+            .button-cancel {
+                color: #e95858;
+                border-color: #e95858;
+            }
+        }
+    }
+}
